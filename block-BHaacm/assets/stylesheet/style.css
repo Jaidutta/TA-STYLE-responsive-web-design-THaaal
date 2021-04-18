@@ -1,0 +1,274 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom CSS */
+:root {
+  --primary: rgb(34,41,70);
+  --secondary: rgb(55, 182, 103);
+  --tertiary: rgb(237, 20, 61);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.full-width {
+  width: 100%;
+}
+
+.padding {
+  padding: 5rem 0;
+}
+
+/* Header */
+.header {
+  background-color: var(--primary);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.nav {
+  text-align: center;
+}
+.nav li {
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+.nav li:nth-child(2) {
+  margin: 1rem ;
+}
+.header a {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header .active {
+  color: var(--secondary);
+}
+.header .brand {
+  font-size: 2.25rem;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+/* article  */
+.about {
+  background-color: aliceblue;
+}
+
+.about.padding {
+  padding: 3rem 0;
+}
+.sub-heading {
+  font-size: 2.5rem;
+  color: rgb(2,5,17);
+  margin: 1rem 0;
+}
+
+p {
+  color: rgb(162,163,165);
+  font-size: 1.4rem;
+}
+
+.about p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+.btn {
+  padding: 0.75rem 2rem;
+  background-color: var(--secondary);
+  color: #fff;
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+}
+
+img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gallery */
+.heading {
+  font-size: 2.8rem;
+  color: rgb(2,5,17);
+  text-align: center;
+}
+
+.gallery-item {
+  margin-top: 2rem;
+}
+
+.gallery-heading {
+  font-size: 2.3rem;
+  margin: 1rem 0;
+}
+.gallery img {
+  height: 100%;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary);
+  color: rgb(188,192,210);
+  text-align: center;
+  padding: 2.5rem 0;
+  font-size: 1.6rem;
+}
+
+.social-wrapper {
+  margin: 1.5rem 0;
+}
+
+.footer i {
+  color: rgb(188,192,210);
+  font-size: 1.4rem;
+  margin-left: 1.5rem;
+}
+
+/* Media Query */
+
+@media screen and (min-width: 768px) {
+  /* Flex */
+  html {
+    font-size: 14px;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .item-center {
+    align-items: center;
+  }
+
+  .item-start {
+    align-items: flex-start;
+  }
+
+  .item-stretch {
+    align-items: stretch;
+  }
+  .flex-48 {
+    flex: 0 1 48%;
+  }
+
+  .flex-30 {
+    flex: 0 1 30%;
+  }
+  /* Header */
+  .header {
+    padding: 1rem 0;
+  }
+  .nav li:nth-child(2) {
+    margin-left: 2rem ;
+  }
+  .nav li {
+    margin-left: 2rem;
+    margin-top: 0;
+  }
+
+  /* About */
+  .about-img {
+    order: 2;
+  }
+
+  .sub-heading {
+    margin: 0 0 1rem 0;
+  }
+  
+  /* Gallery */
+  .gallery img {
+    height: 225px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 1.2rem 0;
+  }
+  .social-wrapper {
+    margin: 0;
+  }
+}

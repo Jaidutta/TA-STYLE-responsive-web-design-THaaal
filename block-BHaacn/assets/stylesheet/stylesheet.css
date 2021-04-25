@@ -411,6 +411,9 @@ legend {
   color: var(--textWhite);
 }
 
+.schedule .mobile-only-date {
+  display: none;
+}
 /* Features */
 .features {
   background-color: rgb(223,236,255);
@@ -547,25 +550,17 @@ iframe {
     padding: 2rem 0;
   }
 
-  .brand {
+  /* .brand {
     margin-bottom: 2rem;
   }
   .nav-item {
     margin: 0 1.5rem;
-  }
+  } */
 
   .nav-menu li {
     margin: 32px 0;
   }
-  .footer a {
-    display: inline-block;
-    margin: 2rem 1.5rem 0;
-  }
-
-  .footer h2 {
-    text-align: center;
-  }
-
+  
   .navbar .nav-menu {
     display: none;
   }
@@ -576,6 +571,12 @@ iframe {
     display: inline-block;
   }
 
+  .brand {
+    position: fixed;
+    left: 20px;
+    top: 16px;
+    z-index: 99;
+  }
 
   .bars {
     position: fixed;
@@ -583,6 +584,7 @@ iframe {
     font-size: 2.5rem;
     color: var(--textWhite);
     right: 20px;
+    top: 16px;
     cursor: pointer;
     z-index: 99;
   }
@@ -598,14 +600,77 @@ iframe {
     top: 120px;
     text-align: center;
   }
-  .brand {
-    position: relative;
-    z-index: 99;
+  
+  .wrapper {
+    display: none;
+  }
+
+  .schedule-item {
+    border: 1px solid salmon;
+    padding: 10px 15px;
+    border-radius: 6px;
+  }
+
+  .schedule-item-img {
+    flex: 0 1 35%;
+  }
+
+  .schedule-item-img img {
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .schedule-item-content {
+    /* padding: 15px; */
+    flex: 0 1 60%;
+  }
+
+  .schedule .mobile-only-date {
+    display: inline-block;
+  }
+
+  .feature-item img {
+    width: 80px;
+    object-fit: cover;
+  }
+
+  .footer a {
+    display: inline-block;
+    margin: .5rem 1.5rem 0;
+  }
+
+  .footer h2 {
+    text-align: center;
+    margin: 1rem .5rem 0;
+  }
+
+  .follow-us  ul {
+    justify-content: center;
   }
 }
 
 @media screen and (max-width: 576px) {
   .container {
     max-width: 560px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .schedule-item {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .schedule-item-img {
+    flex: 0 1 100%;
+  }
+
+  .schedule-item-img img {
+    width: 100;
+    object-fit: cover;
+  }
+
+  .schedule-item-content {
+    /* padding: 15px; */
+    flex: 0 1 100%;
   }
 }
